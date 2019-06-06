@@ -6,16 +6,18 @@ def selection_sort( arr ):
     for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
-        print(cur_index)
+        # print(cur_index)
+    
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
         for x in range (i+1, len(arr)):
-            if arr[x] < arr[smallest_index]:
+            if arr[x] < arr[cur_index]:
+                print("X value inside nested loop", x)
                 cur_index = x
             if cur_index != i:
                 arr[i], arr[cur_index] = arr[cur_index], arr[i]
 
-
+    print(arr)
 
         # TO-DO: swap
 
@@ -25,6 +27,7 @@ def selection_sort( arr ):
     return arr
 
 selection_sort(arr)
+print(arr)
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
