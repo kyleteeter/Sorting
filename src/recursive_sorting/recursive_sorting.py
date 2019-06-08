@@ -6,9 +6,25 @@ def merge( arrA, arrB ):
     i = j = 0
     index = 0
     while i < len(arrA) and j < len(arrB):
+        if arrA[i] < arrB[j]:
+            print("This is arrA index", arrA[i])
+            merged_arr[index] = arrA[i]
+            i += 1
+        else:
+            merged_arr[index] = arrB[j]
+            j += 1
+        
+        index += 1
+    while i < len(arrA):
+        merged_arr[index] = arrA[i]
+        i += 1
+       
+    while j < len(arrB):
+        merged_arr[index] = arrB[j]
+        i += 1
+        
+        
 
-
-    
     return merged_arr
 
 
@@ -25,7 +41,7 @@ def merge_sort( arr ):
 
     # Find Midpoint
 
-    return arr
+    
 
 
 # STRETCH: implement an in-place merge sort algorithm
