@@ -4,6 +4,7 @@ arr = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
 def selection_sort( arr ):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
+        print("This is i", i)
         cur_index = i
         smallest_index = cur_index
         # print(cur_index)
@@ -11,18 +12,16 @@ def selection_sort( arr ):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
         for x in range (i+1, len(arr)):
-            if arr[x] < arr[cur_index]:
+            if arr[smallest_index] > arr[x]:
                 print("X value inside nested loop", x)
-                cur_index = x
-            if cur_index != i:
-                arr[i], arr[cur_index] = arr[cur_index], arr[i]
+                smallest_index = x
+            
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
+           
 
     print(arr)
 
         # TO-DO: swap
-
-
-
 
     return arr
 
