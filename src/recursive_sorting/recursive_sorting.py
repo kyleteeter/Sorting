@@ -2,12 +2,13 @@
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
+    print("First merged_arr", merged_arr)
     # TO-DO
     i = j = 0
     index = 0
     while i < len(arrA) and j < len(arrB):
         if arrA[i] < arrB[j]:
-            print("This is arrA index", arrA[i])
+            # print("This is arrA index", arrA[i])
             merged_arr[index] = arrA[i]
             i += 1
         else:
@@ -18,13 +19,13 @@ def merge( arrA, arrB ):
     while i < len(arrA):
         merged_arr[index] = arrA[i]
         i += 1
-       
+        index += 1
     while j < len(arrB):
         merged_arr[index] = arrB[j]
-        i += 1
+        j += 1
+        index += 1
         
-        
-
+    print(merged_arr)
     return merged_arr
 
 
