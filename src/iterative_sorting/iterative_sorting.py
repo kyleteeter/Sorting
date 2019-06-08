@@ -30,7 +30,12 @@ print(arr)
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
+    for i in range (len(arr)):
+        print("This is i", i)
+        for j in range(0, len(arr) - i - 1):
+            print("This is j", j)
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
 
